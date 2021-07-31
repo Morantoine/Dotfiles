@@ -77,9 +77,6 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start ranger (a file browser)
-bindsym $mod+o exec source ranger 
-
 #set dropdown commands
 bindsym $mod+u [instance="dropdown"] scratchpad show;[instance="dropdown"] move position center;
 bindsym $mod+m [instance="maths"] scratchpad show;[instance="maths"] move position center;
