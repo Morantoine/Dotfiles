@@ -34,7 +34,7 @@ exec --no-startup-id clipster -d
 exec --no-startup-id unclutter 
 
 #clipboard
-exec --no-startup-id imwheel -b 45
+exec --no-startup-id imwheel -g -b 45
 
 #dropdowns
 exec_always --no-startup-id kitty --name dropdown
@@ -243,9 +243,9 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Color settings
 # class                 border  backgr  text    indicator child_border
-client.focused          #0000ff #0000ff #F8F8F2 #0000ff #0000ff 
-client.urgent           #FF0000 #FF0000 #F8F8F2 #FF0000   #FF0000
-client.focused_inactive #44475A #44475A  #F8F8F2 #44475A #44475A 
+client.focused         #00bd06 #00bd06 #00bd06 #00bd06 #00bd06 
+client.urgent           #FF0000 #FF0000 #F8F8F2 #FF0000 #FF0000
+client.focused_inactive #00bd06 #00bd06 #00bd06 #00bd06 #00bd06
 client.unfocused        #44475A #44475A #F8F8F2 #44475A   #44475A
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A3
 

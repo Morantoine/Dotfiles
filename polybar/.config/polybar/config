@@ -24,8 +24,8 @@ background-alt = #444
 foreground = #dfdfdf
 #foreground = #ffffff
 foreground-alt = #555
-primary = #328ecf 
-secondary = #0303fc
+primary = #b3ffb5
+secondary = #00bd06
 alert =#d90000
 
 [bar/example]
@@ -63,7 +63,7 @@ font-4 = Font Awesome 5 Brands:pixelsize=12,-1
 modules-left = i3
 modules-center = spotify previous playpause next
 ;modules-right = xkeyboard pulseaudio backlight battery filesystem memory cpu temperature date 
-modules-right = pulseaudio backlight battery filesystem temperature date 
+modules-right = xkeyboard pulseaudio backlight battery filesystem temperature date 
 
 separator =
 
@@ -339,7 +339,7 @@ time-alt =
 
 format-prefix =  
 format-prefix-foreground = ${colors.foreground}
-format-underline = ${colors.primary}
+format-underline = ${colors.secondary}
 
 label = %date% %time%
 
