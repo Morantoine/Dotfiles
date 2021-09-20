@@ -1,0 +1,11 @@
+nitrogen --restore &
+pactl load-module module-switch-on-connect &
+xset b off &
+#setxkbmap -layout es "" altgr-intl &
+setxkbmap -layout us -variant intl
+numlockx &
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
+export QT_QPA_PLATFORMTHEME=qt5ct

@@ -136,7 +136,7 @@ format-underline = #1db954
 
 [module/backlight]
 type = custom/script
-interval = 10
+interval = 2
 exec = ~/.config/polybar/backlight.sh
 
 scroll-up = exec light -A 5

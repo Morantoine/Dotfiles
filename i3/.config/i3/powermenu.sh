@@ -12,6 +12,6 @@ if [ "$res" = " Shutdown" ]; then
     poweroff
 fi
 if [ "$res" = " Lock" ]; then
-	i3lock -i /home/antoine/Documents/wallpapers/car.png
+	i3lock -i /home/antoine/Documents/wallpapers/landscape.png
 fi
 exit 0

@@ -70,6 +70,7 @@ source $HOME/.config/nvim/plug-config/coc.vim
 "}}}3
 
 "{{{3 Remaps
+nnoremap <silent> K :<C-U>call CocAction('doHover')<CR>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fh <cmd>Telescope find_files hidden=true<cr>
 nnoremap <leader>gf <cmd>Telescope git_files<cr>
