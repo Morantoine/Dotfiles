@@ -41,13 +41,11 @@ exec_always --no-startup-id kitty --name dropdown
 for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 700 500
 for_window [instance="dropdown"] move scratchpad
-for_window [instance="dropdown"] border pixel 20
 
 exec_always --no-startup-id kitty --name maths -e ipython
 for_window [instance="maths"] floating enable
 for_window [instance="maths"] resize set 700 500
 for_window [instance="maths"] move scratchpad
-for_window [instance="maths"] border pixel 20
 
 #bluelight
 exec --no-startup-id redshift-gtk
@@ -62,6 +60,12 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+#Media Control
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 #Adjust light
 bindsym XF86MonBrightnessDown exec light -U 5
@@ -163,7 +167,7 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
-bindsym $mod+Ctrl+0 scratchpad show
+#bindsym $mod+Ctrl+0 scratchpad show
 
 # change workspace
 bindsym $mod+Tab workspace next
@@ -180,6 +184,24 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+Ctrl+0 move scratchpad
+
+# move focused container and swap to that screen
+bindsym $mod+Control+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Control+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Control+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Control+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Control+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Control+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Control+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Control+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Control+9 move container to workspace $ws9; workspace $ws9
+bindsym $mod+Control+0 move container to workspace $ws10; workspace $ws10
+
+# move workspaces between monitors
+bindsym $mod+Shift+Control+m move workspace to output left
+
+# move container to the active workspace on another screen
+bindsym $mod+Control+m move container to output left
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -231,7 +253,9 @@ bindsym Print exec flameshot gui
 
 #gaps
 gaps inner 15
-for_window [class=".*"] border pixel 3
+for_window [class=".*"] border pixel 0
+for_window [instance="dropdown"] border pixel 2
+for_window [instance="maths"] border pixel 2
 for_window [class="Spotify"] move to workspace $ws10
 
 exec_always --no-startup-id picom --experimental-backends --config $HOME/.config/picom/picom.conf
@@ -243,9 +267,9 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Color settings
 # class                 border  backgr  text    indicator child_border
-client.focused         #00bd06 #00bd06 #F8F8F2 #00bd06 #00bd06 
+client.focused         #0E2F44 #0E2F44 #F8F8F2 #00bd06 #0E2F44 
 client.urgent           #FF0000 #FF0000 #F8F8F2 #FF0000 #FF0000
-client.focused_inactive #00bd06 #00bd06 #00bd06 #00bd06 #00bd06
+client.focused_inactive #0E2F44 #0E2F44 #F8F8F2 #00bd06 #0E2F44
 client.unfocused        #44475A #44475A #F8F8F2 #44475A   #44475A
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A3
 

@@ -1,1 +1,1 @@
-exec spicetify backup apply && exec sed -i '7s/.*/Exec=spotify --force-device-scale-factor=1.3 %U/' /usr/share/applications/spotify.desktop
+sudo sed -i '7s/.*/Exec=spotify --force-device-scale-factor=1.3 %U/' /usr/share/applications/spotify.desktop && spicetify backup apply
