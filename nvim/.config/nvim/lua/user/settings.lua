@@ -26,3 +26,5 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 -- only one status line for every files
 vim.opt.laststatus = 3
+-- use system clipboard (not wheel tho)
+vim.opt.clipboard = "unnamedplus"

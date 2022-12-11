@@ -11,9 +11,9 @@ end
 local keymap = vim.keymap
 
 -- disable virtual text (using Lspsaga popup instead)
-vim.diagnostic.config({
-	virtual_text = false,
-})
+-- vim.diagnostic.config({
+-- 	virtual_text = false,
+-- })
 
 --enable keybinds for available lsp server
 local on_attach = function(client, bufnr)

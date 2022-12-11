@@ -30,3 +30,6 @@ treesitter.setup({
 	-- auto install above language parsers
 	auto_install = true,
 })
+
+-- Change background color
+vim.cmd([[ highlight TelescopeNormal guibg=none ]])
