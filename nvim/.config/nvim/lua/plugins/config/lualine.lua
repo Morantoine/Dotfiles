@@ -8,6 +8,7 @@ lualine.setup({
 	sections = {
 		-- remove Tmux :(
 		lualine_x = { "encoding", "filetype" },
+		-- show session
 	},
 })
 

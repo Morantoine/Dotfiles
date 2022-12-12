@@ -105,6 +105,18 @@ return require("packer").startup(function(use)
 	-- Sniprun to run code
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 
+	-- session manager and integration to Telescope
+	use({
+		"rmagatti/auto-session",
+		config = function()
+			require("auto-session").setup({
+				log_level = "error",
+				auto_session_suppress_dirs = { "~/", "~/Downloads", "/", "/tmp" },
+			})
+		end,
+	})
+	use("rmagatti/session-lens")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

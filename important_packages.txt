@@ -1,0 +1,8 @@
+bluetooth-autoconnect
+blueman
+i3-gaps
+i3lock
+light
+optimus-manager
+polybar
+
