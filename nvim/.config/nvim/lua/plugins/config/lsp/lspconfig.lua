@@ -99,3 +99,13 @@ lspconfig["clangd"].setup({
 	capabilities = capabilities_clang,
 	on_attach = on_attach,
 })
+
+lspconfig["bashls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["texlab"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})

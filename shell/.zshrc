@@ -5,10 +5,10 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
 	fi
 
-autoload -U promptinit; promptinit
-prompt spaceship
-SPACESHIP_VI_MODE_SHOW=false
-SPACESHIP_DOCKER_CONTEXT_SHOW=false
+# source /usr/lib/spaceship-prompt/spaceship.zsh
+# SPACESHIP_VI_MODE_SHOW=false
+# SPACESHIP_DOCKER_CONTEXT_SHOW=false
+# SPACESHIP_PROMPT_ASYNC=false
 
 HISTFILE=~/.zhistory
 HISTSIZE=10000
@@ -49,13 +49,13 @@ alias pdfjoin='pdfjam --fitpaper true --rotateoversize false --suffix joined'
 alias startvpn='sudo openvpn /home/antoine/Documents/.vpn.ovpn'
 alias dualscreen="/home/antoine/.config/i3/dualscreen.sh"
 alias rg='source ranger'
-alias ls='ls -lH --color=auto'
-alias la='ls -alH --color=auto'
+alias ls='ls -lH --color=auto --ignore=lost+found'
+alias la='ls -alH --color=auto --ignore=lost+found'
 alias vv='nvim'
 alias vpn='sudo openvpn $HOME/.vpn'
 alias ag='gcalcli agenda --details=location --details=length --details=description'
-alias agw='gcalcli calw'
-alias agm='gcalcli calm'
-alias zshconfig='nvim /home/antoine/.zshrc'
+alias icat="kitty +kitten icat"
 [[ -s /home/antoine/.autojump/etc/profile.d/autojump.sh ]] && source /home/antoine/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
+
+eval "$(starship init zsh)"

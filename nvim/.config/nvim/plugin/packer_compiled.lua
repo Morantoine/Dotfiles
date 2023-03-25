@@ -121,6 +121,11 @@ _G.packer_plugins = {
     path = "/home/antoine/.local/share/nvim/site/pack/packer/start/dracula.nvim",
     url = "https://github.com/Mofiqul/dracula.nvim"
   },
+  editors = {
+    loaded = true,
+    path = "/home/antoine/.local/share/nvim/site/pack/packer/start/editors",
+    url = "https://github.com/tamarin-prover/editors"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/antoine/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -246,6 +251,11 @@ _G.packer_plugins = {
     path = "/home/antoine/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  undotree = {
+    loaded = true,
+    path = "/home/antoine/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/antoine/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -255,6 +265,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antoine/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/home/antoine/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 
