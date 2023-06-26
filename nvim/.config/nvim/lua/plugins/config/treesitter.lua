@@ -17,6 +17,7 @@ treesitter.setup({
 		"javascript",
 		"html",
 		"markdown",
+		"markdown_inline",
 		"bash",
 		"lua",
 		"vim",
@@ -29,10 +30,6 @@ treesitter.setup({
 	},
 	-- auto install above language parsers
 	auto_install = true,
-	-- auto-tag
-	autotag = {
-		enable = true,
-	},
 })
 
 -- Change background color

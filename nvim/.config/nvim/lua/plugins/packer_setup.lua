@@ -43,9 +43,13 @@ return require("packer").startup(function(use)
 
 	-- Telescope
 	use({
+		"nvim-telescope/telescope-fzf-native.nvim",
+		run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+	})
+	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
-		requires = { { "nvim-lua/plenary.nvim" }, { "BurntSushi/ripgrep" } },
+		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
 	-- Vim-Surround
@@ -62,6 +66,14 @@ return require("packer").startup(function(use)
 		"nvim-tree/nvim-tree.lua",
 		requires = {
 			"nvim-tree/nvim-web-devicons", -- optional, for file icons
+		},
+	})
+
+	-- Undo-Tree
+	use({
+		"jiaoshijie/undotree",
+		requires = {
+			"nvim-lua/plenary.nvim",
 		},
 	})
 
@@ -116,15 +128,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("rmagatti/session-lens")
-
-	-- Syntax for Tamarin
-	use("tamarin-prover/editors")
-
-	-- Undo-tree
-	use("mbbill/undotree")
-
-	-- Latex support
-	use("lervag/vimtex")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

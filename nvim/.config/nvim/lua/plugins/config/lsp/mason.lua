@@ -17,11 +17,10 @@ mason.setup()
 
 mason_lspconfig.setup({
 	ensure_installed = {
-		"bashls",
 		"clangd",
 		"cmake",
 		"dockerls",
-		"sumneko_lua",
+		"lua_ls",
 		"pyright",
 		"rust_analyzer",
 	},

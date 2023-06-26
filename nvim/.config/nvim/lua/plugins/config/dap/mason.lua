@@ -34,6 +34,10 @@ end
 mason_dap.setup({
 	ensure_installed = { "python", "cpptools" },
 	automatic_setup = true,
+	handlers = {
+		-- function(config)
+		-- 	-- Keep original functionality
+		-- 	mason_dap.default_setup(config)
+		-- end,
+	},
 })
-
-mason_dap.setup_handlers()
